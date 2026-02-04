@@ -1,0 +1,12 @@
+num1 = int(input("Enter a number"))
+total = num1
+char1 = "n"
+while char1 != "y":
+    num2 = int(input("Enter a number"))
+    char1 = input("Would u like to input nother number?").lower()
+    if char1 == "y":
+        num3 = int(input("Enter another number"))
+        total = num1 + num2 + num3
+print(total)
+        
+
