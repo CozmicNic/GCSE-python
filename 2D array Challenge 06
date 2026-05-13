@@ -1,0 +1,6 @@
+EmptyArray = [[0 for column in range(5)]for row in range(2)]
+print(EmptyArray)
+Range = int(input("Enter the number of range you would like it to be"))
+EmptyArray = [[0 for column in range(5)]for row in range(Range)]
+print(EmptyArray)
+    
