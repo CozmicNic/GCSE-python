@@ -1,0 +1,31 @@
+def choice(option):
+    print(option, "chosen")
+
+    if option == 5:
+        print("bye")
+
+
+def Speromenu():
+    Speromenulist = [
+        "1) think big",
+        "2) thing bigger",
+        "3) winning",
+        "4) winner",
+        "5) Exit"
+    ]
+
+    for item in Speromenulist:
+        print(item)
+
+    option = int(input("What are you going to do? "))
+
+
+    while option < 1 or option > 5:
+        print("Invalid choice")
+        option = int(input("Pick again: "))
+
+    return option, Speromenulist
+
+
+option, menu = Speromenu()
+choice(option)
