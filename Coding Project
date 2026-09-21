@@ -1,0 +1,62 @@
+def display_welcome():
+    print("========================================")
+    print("   WELCOME TO THE GCSE COMPUTER QUIZ    ")
+    print("========================================")
+
+def play_game():
+    quiz_data = [
+     ("What does CPU stand for? ", "central processing unit"),
+    ("Which type of memory loses its data when the power is turned off? ", "volatile"),
+    ("What is the term for a small, high-speed storage location inside the CPU? ", "register"),
+    ("What does LAN stand for? ", "local area network"),
+    ("Which network topology uses a single central cable known as a backbone? ", "bus"),
+    ("What type of software manages hardware and provides a user interface? (full name)", "operating system"),
+    ("How many bits make up a single byte? ", "8"),
+    ("What is the process of scrambling data so it cannot be read if intercepted called? ", "encryption"),
+    ("Which network device connects a local network to a wide area network like the internet? ", "router"),
+    ("What term describes malicious software designed to disrupt or damage a system? ", "malware"),
+    ("What is cache?", "super fast memory"),
+    ("What does HTTPS stand for?", "hypertext transfer protocol secure"),
+    ("What does POP3 stand for?", "post office protocol"),
+    ("What act Controls how personal data is collected, stored, and processed by organizations?", "data protect act"),
+    ("What does FTP stand for?", "File Transfer Protocol")
+    ]
+    score = 0
+    total_questions = len(quiz_data)
+
+    for i in range(total_questions):
+        question, correct_answer = quiz_data[i]
+
+        valid_input = False
+        while not valid_input:
+            user_answer = input(f"Q{i+1}: {question}").strip().lower()
+            
+            if user_answer == "":
+                print("Error: Answer cannot be blank. Try again.")
+            else:
+                valid_input = True
+
+        if user_answer == correct_answer:
+            print("Correct!\n")
+            score += 1
+        else:
+            print(f"Incorrect. The correct answer was: {correct_answer.title()}\n")
+            
+
+    percentage = (score / total_questions) * 100
+    print("----------------------------------------")
+    print(f"Game Over! Your final score is {score}/{total_questions}")
+    print(f"That is {percentage}%")
+    
+    if percentage == 100:
+        print("Top marks! Excellent revision.")
+    elif percentage >= 50:
+        print("Not bad, but a bit more revision needed!")
+    else:
+        print("Time to hit the revision guides!")
+    print("----------------------------------------")
+
+
+if __name__ == "__main__":
+    display_welcome()
+    play_game()
