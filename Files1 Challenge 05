@@ -1,0 +1,5 @@
+def main():
+    tree= open("Names.txt")
+    for line in tree.readlines():
+        print(line)
+main()
