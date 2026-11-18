@@ -1,0 +1,7 @@
+notepad = open("numbers.txt", "w")
+notepad.write("4, ")
+notepad.write("8, ")
+notepad.write("9, ")
+notepad.write("3, ")
+notepad.write("7")            
+notepad.close()
